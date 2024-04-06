@@ -34,7 +34,7 @@ public class Character {
     }
 
     public String toString() {
-        return "Name: " + name + "\nHero?: " + hero + "\nGold: " + gold + "\nLevel: " + level;
+        return "\nName: " + name + "\nHero?: " + hero + "\nGold: " + gold + "\nLevel: " + level;
     }
 
     public void getRewards(int luck) {
@@ -54,15 +54,6 @@ public class Character {
             count++;
         }
         System.out.println("You leveled up " + count + " times!\nYou are now level " + level + "!");
-    }
-
-    public static void main(String[] args) {
-        Character nick = new Character("Nick", true);
-        System.out.println(nick);
-        nick.getRewards((int)Math.random() * 10 + 1);
-        System.out.println(nick);
-        nick.gainEXP();
-        System.out.println(nick);
     }
 
 }

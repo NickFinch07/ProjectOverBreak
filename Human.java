@@ -17,12 +17,20 @@ public class Human extends Character {
         return health + "/" + maxHealth;
     }
 
+    // Non-Inherited Methods -------------
+
     public void healHealth() {
         health += 20;
         if (health > maxHealth) {
             health = maxHealth;
         }
     }
+
+    public void takeDamage(int damage) {
+        health -= damage;
+    }
+
+    // ------------------------------------
 
     public void getRewards() { // Interesting Method Override
         int increasedLuck = 50;
@@ -33,8 +41,4 @@ public class Human extends Character {
         return super.toString() + "\nHealth: " + this.getHealth();
     }
 
-    public static void main(String[] args) {
-        Human nick = new Human("Nick", true, 200);
-        System.out.println(nick);
-    }
 }
